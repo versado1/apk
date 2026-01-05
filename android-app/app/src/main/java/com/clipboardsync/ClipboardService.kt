@@ -118,17 +118,16 @@ class ClipboardService : Service() {
                     }
                     
                     // Enviar portapapeles actual al conectar
-                    getCurrentClipboard()?.let { content ->
-                        if (content.isNotEmpty()) {
-                            sendToServer(content)
-                        }
+                    val content = getCurrentClipboard()
+                    if (content != null && content.isNotEmpty()) {
+                        sendToServer(content)
                     }
                 }
                 
                 override fun onMessage(message: String?) {
-                    message?.let {
+                    if (message != null) {
                         try {
-                            val json = JSONObject(it)
+                            val json = JSONObject(message)
                             if (json.getString("type") == "clipboard") {
                                 val content = json.getString("content")
                                 val source = json.optString("source", "unknown")
@@ -185,7 +184,7 @@ class ClipboardService : Service() {
                 connectToServer()
             }
         }
-        handler.postDelayed(reconnectRunnable!!, 5000)
+        reconnectRunnable?.let { handler.postDelayed(it, 5000) }
     }
     
     private fun startClipboardMonitoring() {
@@ -201,7 +200,7 @@ class ClipboardService : Service() {
                 }
             }
         }
-        handler.post(clipboardCheckRunnable!!)
+        clipboardCheckRunnable?.let { handler.post(it) }
     }
     
     private fun stopClipboardMonitoring() {
