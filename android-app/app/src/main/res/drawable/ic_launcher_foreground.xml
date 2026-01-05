@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Clipboard body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,30 L73,30 C75.2,30 77,31.8 77,34 L77,78 C77,80.2 75.2,82 73,82 L35,82 C32.8,82 31,80.2 31,78 L31,34 C31,31.8 32.8,30 35,30 Z" />
+    
+    <!-- Clipboard clip -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,26 L63,26 C64.1,26 65,26.9 65,28 L65,34 L43,34 L43,28 C43,26.9 43.9,26 45,26 Z" />
+    
+    <!-- Lines on clipboard -->
+    <path
+        android:fillColor="#4ecdc4"
+        android:pathData="M39,44 L69,44"
+        android:strokeWidth="3"
+        android:strokeColor="#4ecdc4" />
+    <path
+        android:fillColor="#4ecdc4"
+        android:pathData="M39,54 L69,54"
+        android:strokeWidth="3"
+        android:strokeColor="#4ecdc4" />
+    <path
+        android:fillColor="#4ecdc4"
+        android:pathData="M39,64 L59,64"
+        android:strokeWidth="3"
+        android:strokeColor="#4ecdc4" />
+    
+    <!-- Sync arrows -->
+    <path
+        android:fillColor="#1a1a2e"
+        android:pathData="M62,70 L72,76 L62,82 Z" />
+    <path
+        android:fillColor="#1a1a2e"
+        android:pathData="M46,70 L36,76 L46,82 Z" />
+    
+</vector>
